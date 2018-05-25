@@ -5,4 +5,5 @@
 * Made a prompt table to give users several options to sort different columns and also notice users when they provide wrong options.
 ###### 2. CleaningUpData.txt :
 * Created a loop to run two recorded Marcos multiple times to add formatted headers to all worksheets inside the workbook.
-###### Note: Use F8 to run a single line of code each time. 
+###### Note: Use F8 to run a single line of code each time;
+###### & is used to combine multiple string values together;
