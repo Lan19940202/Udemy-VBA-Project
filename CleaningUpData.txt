@@ -1,0 +1,58 @@
+Public Sub Cleaning()
+    Dim i As Integer
+    i = 1
+
+    Do While i <= Worksheets.Count
+        Worksheets(i).Select
+        
+        AddHeaders
+        FormatList
+        
+        i = i + 1
+    Loop
+
+End Sub
+Sub AddHeaders()
+'
+' AddHeaders Macro
+' Add headers to the form
+'
+
+'
+    Rows("1:1").Select
+    Selection.Insert Shift:=xlDown, CopyOrigin:=xlFormatFromLeftOrAbove
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "Division"
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "Category"
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "January"
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "February"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "March"
+    Range("F1").Select
+    ActiveCell.FormulaR1C1 = "Total"
+    Range("F2").Select
+End Sub
+Sub FormatList()
+'
+' FormatList Macro
+' Change the format of the headers
+'
+
+'
+    Range("A1:F1").Select
+    Selection.Font.Bold = True
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .Color = 12611584
+        .TintAndShade = 0
+        .PatternTintAndShade = 0
+    End With
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark1
+        .TintAndShade = 0
+    End With
+End Sub
