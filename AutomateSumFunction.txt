@@ -1,0 +1,116 @@
+Public Sub AutomateSum()
+    Dim lastCell As String
+    Dim i As Integer
+    i = 1
+    
+    Do While i <= Worksheets.Count
+        Worksheets(i).Select
+        
+        '  sum string
+        Range("B2").Select
+        Selection.End(xlDown).Select
+        ActiveCell.Offset(1, 0).Select
+        ActiveCell.Value = "SUM"
+        middle
+        
+
+        Range("C2").Select
+        Selection.End(xlDown).Select
+        lastCell = ActiveCell.Address(False, False)
+        ActiveCell.Offset(1, 0).Select
+        ActiveCell.Value = "=SUM(C2:" & lastCell & ")"
+        
+        Range("D2").Select
+        Selection.End(xlDown).Select
+        lastCell = ActiveCell.Address(False, False)
+        ActiveCell.Offset(1, 0).Select
+        ActiveCell.Value = "=SUM(D2:" & lastCell & ")"
+        
+        Range("E2").Select
+        Selection.End(xlDown).Select
+        lastCell = ActiveCell.Address(False, False)
+        ActiveCell.Offset(1, 0).Select
+        ActiveCell.Value = "=SUM(E2:" & lastCell & ")"
+        
+        '  select the f2 cell of the active sheet
+        Range("F2").Select
+        
+        '  select the last cell in the column
+        Selection.End(xlDown).Select
+        
+        lastCell = ActiveCell.Address(False, False)
+        
+        ActiveCell.Offset(1, 0).Select
+        ActiveCell.Value = "=SUM(F2:" & lastCell & ")"
+        
+        Color
+        
+        i = i + 1
+    Loop
+End Sub
+Sub Color()
+'
+' Color Macro
+'
+
+'
+    Range("B16:F16").Select
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorAccent2
+        .TintAndShade = 0.399975585192419
+        .PatternTintAndShade = 0
+    End With
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlMedium
+    End With
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlMedium
+    End With
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlMedium
+    End With
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlMedium
+    End With
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+End Sub
+Sub middle()
+'
+' middle Macro
+'
+
+'
+    Range("B16").Select
+    With Selection
+        .HorizontalAlignment = xlCenter
+        .VerticalAlignment = xlBottom
+        .WrapText = False
+        .Orientation = 0
+        .IndentLevel = 0
+        .ShrinkToFit = False
+        .ReadingOrder = xlContext
+        .MergeCells = False
+    End With
+    Selection.Font.Bold = True
+    With Selection.Font
+        .ThemeColor = xlThemeColorDark2
+        .TintAndShade = -0.499984740745262
+    End With
+End Sub
