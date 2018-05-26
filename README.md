@@ -7,6 +7,8 @@
 * Created a loop to run two recorded Marcos multiple times to add formatted headers to all worksheets inside the workbook.
 ###### 3. AutomateSumFunction.txt :
 * Created a loop to automate SUM function and adjust format for all worksheets in the workbook.
+###### 4. QuarterlyReport.txt :
+* Wrote VBA code to clean up and summarize the quarterly reports, copy the data from each worksheet, and paste in the yearly report worksheet. 
 ###### Note: 
 * Use F8 to run a single line of code each time;
 * & is used to combine multiple string values together;
