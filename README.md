@@ -16,6 +16,7 @@ browse worksheets by clicking the worksheet name in the drop-down list, and clic
 * PS: User From is not avaliable in mac Excel 2016 version....
 ###### 6. 
 * Wrote VBA code to import tab delimited data from separate text files to separate Excel workbooks.
+* PS: on a Mac the filefilter is not working and it is not possible to select more then one file (https://www.rondebruin.nl/mac/mac015.htm).
 ###### Note: 
 * Use F8 to run a single line of code each time;
 * & is used to combine multiple string values together;
