@@ -10,6 +10,8 @@
 ###### 4. QuarterlyReport.txt :
 * Wrote VBA code to clean up and summarize the quarterly reports, copy the data from each worksheet, and paste in the yearly report worksheet. 
 ###### 5. QuarterlyReportForm-01.xlsm (module.txt, this workbook.txt, userform.txt)
+* Created a prompt table which allowed users to:
+browse worksheets by clicking the worksheet name in the drop-down list, and clicking the button to create & name new blank worksheet, and produce the final yearly report.
 * PS: User From is not avaliable in mac Excel 2016 version....
 ###### Note: 
 * Use F8 to run a single line of code each time;
