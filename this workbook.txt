@@ -1,0 +1,5 @@
+
+Private Sub Workbook_Open()
+    ' show the user form during the open event of the workbook
+    FinalReportFRM.Show
+End Sub

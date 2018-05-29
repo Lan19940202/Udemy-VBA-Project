@@ -1,0 +1,24 @@
+Private Sub AddSheetButton_Click()
+    Worksheets.Add before:=Worksheets(1)
+    ' := is the assignment operator for argumnets
+    ActiveSheet.Name = InputBox("Please input a name to the new worksheet:")
+End Sub
+
+Private Sub cboWhichSheets_Change()
+    Worksheets(Me.cboWhichSheets.Value).Select
+End Sub
+
+Private Sub RunReportButton2_Click()
+    FinalReport
+End Sub
+
+Private Sub UserForm_Initialize()
+    Dim i As Integer
+    ' the default value of i is 0
+    ' I neet to initialize i equals to 1
+    i = 1
+    Do While i <= Worksheets.Count
+        Me.cboWhichSheets.AddItem Worksheets(i).Name
+        i = i + 1
+    Loop
+End Sub
